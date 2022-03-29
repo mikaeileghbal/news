@@ -8,18 +8,27 @@
     <title>Document</title>
   </head>
   <body>
-    <header>
+    <header class="max-width centered">
       <h1>New Articles</h1>
+      <ul class="nav">
+        <li><a href="">home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">contact</a></li>
+        <li><a href="">portfolio</a></li>
+      </ul>
+      <div class="source-container">
+        <label for="source">News source:</label>
+        <select name="source" id="source">
+          <option value="bbc">BBC Corporation</option>
+          <option value="bbc">New York Times</option>
+          <option value="bbc">Al Jazeereh</option>
+        </select>
+      </div>
     </header>
-    <main id="main-articles"></main>
 
-    <!-- <div class="atricle">
-      <a href="">
-        <h2></h2>
-        <img src="" alt="" />
-        <p></p>
-      </a>
-    </div> -->
+    <!-- Articles container -->
+    <main id="main-articles" class="max-width centered"></main>
+
     <script src="src/index.js" type="module"></script>
   </body>
 </html>
