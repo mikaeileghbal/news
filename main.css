@@ -1,5 +1,10 @@
 * {
   box-sizing: border-box;
+  --header-font-size: 14px;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .max-width {
@@ -13,7 +18,8 @@
 header {
   text-align: center;
   background-color: #2e3852;
-  padding: 0 16px;
+  padding: 6px 16px;
+  font-size: var(--header-font-size);
   color: white;
   display: flex;
   justify-content: space-between;
@@ -33,7 +39,6 @@ header h1 {
 }
 .nav li a {
   color: aliceblue;
-  font-size: 12px;
   letter-spacing: 0.5px;
   text-decoration: none;
   text-transform: uppercase;
@@ -65,6 +70,8 @@ header h1 {
   background-color: #f4f4f4;
   transition: 0.6s;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  align-self: stretch;
+  height: 100%;
 }
 
 .article:hover img {
