@@ -10,7 +10,10 @@ export default {
                 <h2>${article.title}</h2>
                 <span class="author">${
                   article.author ? article.author : ""
-                }</span>
+                }  :  </span><span class="date">${article.publishedAt.slice(
+      0,
+      10
+    )}</span>
                 <img src="${article.urlToImage}" alt="" />
                 <p>${article.description}</p>
               </a>
@@ -47,7 +50,7 @@ export default {
       font-size: 18px;
       margin-bottom: 0;
     }
-    .article .author {
+    .article span {
       color: gray;
       font-family: sans-serif;
       font-size: 12px;
