@@ -5,6 +5,7 @@
 }
 
 body {
+  padding-top: 56px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   overflow-y: scroll;
 }
@@ -17,12 +18,18 @@ body {
 }
 
 header {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0px;
+  width: 100%;
   text-align: center;
   background-color: #2e3852;
   padding: 6px 16px;
   font-size: var(--header-font-size);
   color: white;
   display: flex;
+  z-index: 20;
 
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 16px rgba(0, 0, 0, 0.19);
