@@ -30,6 +30,25 @@ export default {
       grid-auto-rows: max-content;
       grid-auto-flow: row dense;
     }
+
+    #main-articles.row {
+        grid-template-columns: 1fr;
+        padding:32px; 
+    }
+    
+    #main-articles.row img{
+      width:150px;
+      border-radius:4px;
+      float:right;
+      top:0;
+      margin:16px 8px 16px 32px;
+    }
+    #main-articles.row a::after{
+      content:"";
+      clear:both;
+      display:table;
+    }
+
     .article {
       padding: 10px;
       margin-bottom: 8px;
