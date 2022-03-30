@@ -4,6 +4,7 @@ export class Article extends HTMLElement {
       <div class="article">
         <a href="${article.url}">
           <h2>${article.title}</h2>
+          <span class="author">${article.author ? article.author : ""}</span>
           <img src="${article.urlToImage}" alt="" />
           <p>${article.description}</p>
         </a>

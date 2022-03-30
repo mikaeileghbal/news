@@ -1,17 +1,21 @@
 import { apiURL } from "./newsUrl.js";
 import "./components/Article.js";
+import triggerEvent from "./customEvents.js";
 
 const main = document.getElementById("main-articles");
 
 document.addEventListener("DOMContentLoaded", () => {
+  triggerEvent(document, "actionstart", {});
   updateActicles();
 });
 
 async function updateActicles() {
   const res = await fetch(apiURL);
   const results = await res.json();
-
   results.articles.map(createArticle);
+  setTimeout(() => {
+    triggerEvent(document, "actionend", {});
+  }, 100);
 }
 
 function createArticle(article) {
