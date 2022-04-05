@@ -1,27 +1,27 @@
 export default {
-  render(article) {
-    return `${this.css()}
+	render(article) {
+		return `${this.css()}
             ${this.html(article)}`;
-  },
+	},
 
-  html(article) {
-    return `<div class="article">
+	html(article) {
+		return `<div class="article">
               <a href="${article.url}">
                 <h2>${article.title}</h2>
                 <span class="author">${
-                  article.author ? article.author : ""
-                }  :  </span><span class="date">${article.publishedAt.slice(
-      0,
-      10
-    )}</span>
+									article.author ? article.author : ""
+								}  :  </span><span class="date">${article.publishedAt.slice(
+			0,
+			10
+		)}</span>
                 <img src="${article.urlToImage}" alt="" />
                 <p>${article.description}</p>
               </a>
             </div>`;
-  },
+	},
 
-  css() {
-    return `<style>
+	css() {
+		return `<style>
     #main-articles {
       margin: 24px auto;
       display: grid;
@@ -33,7 +33,7 @@ export default {
 
     #main-articles.row {
         grid-template-columns: 1fr;
-        padding:32px; 
+        padding:0px; 
     }
     
     #main-articles.row img{
@@ -87,5 +87,5 @@ export default {
     }
     </style>
     `;
-  },
+	},
 };
