@@ -8,9 +8,23 @@ const defaultSource = "bbc-news";
 
 document.addEventListener("DOMContentLoaded", async () => {
   triggerEvent(document, "actionstart", {});
-  updateActicles();
-  await updateSource();
-  selectSource.value = defaultSource;
+  // updateActicles();
+  // await updateSource();
+  // selectSource.value = defaultSource;
+
+  const btnViewGrid = document.getElementById("btnViewRow");
+  btnViewGrid.addEventListener("click", (e) => {
+    main.classList.add("row");
+    btnViewGrid.classList.add("active");
+    btnViewRow.classList.remove("active");
+  });
+
+  const btnViewRow = document.getElementById("btnViewGrid");
+  btnViewRow.addEventListener("click", (e) => {
+    main.classList.remove("row");
+    btnViewRow.classList.add("active");
+    btnViewGrid.classList.remove("active");
+  });
 });
 
 async function updateSource() {
@@ -39,16 +53,6 @@ async function updateActicles(source = defaultSource) {
 }
 
 function createArticle(article) {
-  // return `
-  //     <div class="article">
-  //       <a href="${article.url}">
-  //         <h2>${article.title}</h2>
-  //         <img src="${article.urlToImage}" alt="" />
-  //         <p>${article.description}</p>
-  //       </a>
-  //   </div>
-  // `;
-
   const articleElem = document.createElement("news-article");
   articleElem.article = article;
   main.appendChild(articleElem);

@@ -89,10 +89,11 @@ select {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
   z-index: 10;
   padding: 30px 100px;
   background-color: #2e3852;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 16px rgba(0, 0, 0, 0.19);
+  transform: translate(-50%, -50%);
 }
 #loading {
   width: 60px;
@@ -100,7 +101,8 @@ select {
   border-radius: 50%;
   border: 8px solid #ddd;
   border-top-color: var(--accent-red);
-  animation: spin 2s linear infinite;
+
+  animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
@@ -109,5 +111,22 @@ select {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.button-container {
+  padding-top: 10px;
+}
+
+.btnView {
+  padding: 10px 16px;
+  border: none;
+  color: #2e3852;
+  background-color: #ddd;
+  cursor: pointer;
+
+  &:hover,
+  &.active {
+    background-color: #a05050;
   }
 }
