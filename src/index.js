@@ -8,9 +8,15 @@ const defaultSource = "bbc-news";
 
 document.addEventListener("DOMContentLoaded", async () => {
   triggerEvent(document, "actionstart", {});
+<<<<<<< HEAD
   updateActicles();
   await updateSource();
   selectSource.value = defaultSource;
+=======
+  // updateActicles();
+  // await updateSource();
+  // selectSource.value = defaultSource;
+>>>>>>> 6a28263d93bd258a8475287314d8fed4eda69073
 
   const btnViewGrid = document.getElementById("btnViewRow");
   btnViewGrid.addEventListener("click", (e) => {
