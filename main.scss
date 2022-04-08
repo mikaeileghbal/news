@@ -138,7 +138,7 @@ select {
 	}
 
 	body {
-		padding-top: 144px;
+		padding-top: 128px;
 	}
 
 	.source-container {
@@ -148,6 +148,23 @@ select {
 		padding: 0;
 	}
 	.logo {
-		margin: 16px 0;
+		margin-top: 16px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.nav a {
+		font-size: 80%;
+	}
+
+	body {
+		padding-top: 120px;
+	}
+	select {
+		padding: 4px 8px;
+		width: 150px;
+	}
+	label {
+		font-size: 80%;
 	}
 }
